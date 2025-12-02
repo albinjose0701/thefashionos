@@ -1,12 +1,35 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navbar from "@/components/landing/Navbar";
+import HeroSection from "@/components/landing/HeroSection";
+import CreativeChallengeSection from "@/components/landing/CreativeChallengeSection";
+import CreativeCopilotSection from "@/components/landing/CreativeCopilotSection";
+import ModulesSection from "@/components/landing/ModulesSection";
+import FlowSection from "@/components/landing/FlowSection";
+import FeaturesGridSection from "@/components/landing/FeaturesGridSection";
+import TechnologySection from "@/components/landing/TechnologySection";
+import DesignerTypesSection from "@/components/landing/DesignerTypesSection";
+import EarlyAccessSection from "@/components/landing/EarlyAccessSection";
+import FAQSection from "@/components/landing/FAQSection";
+import FinalPushSection from "@/components/landing/FinalPushSection";
+import Footer from "@/components/landing/Footer";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Navbar />
+      <main>
+        <HeroSection />
+        <CreativeChallengeSection />
+        <CreativeCopilotSection />
+        <ModulesSection />
+        <FlowSection />
+        <FeaturesGridSection />
+        <TechnologySection />
+        <DesignerTypesSection />
+        <EarlyAccessSection />
+        <FAQSection />
+        <FinalPushSection />
+      </main>
+      <Footer />
     </div>
   );
 };
