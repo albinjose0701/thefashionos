@@ -19,7 +19,7 @@ const CreativeChallengeSection = () => {
           >
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight mb-8 whitespace-nowrap">
               Design is fluid.{" "}
-              <span className="text-muted-foreground italic">Your tools shouldn't box you in.</span>
+              <span className="text-muted-foreground italic">Your tools shouldn't be.</span>
             </h2>
           </motion.div>
 
@@ -32,13 +32,12 @@ const CreativeChallengeSection = () => {
               className="space-y-6"
             >
               <p className="text-lg text-muted-foreground leading-relaxed font-body">
-                You start with a feeling—a texture, a color from your morning coffee, 
-                a glimpse of fabric at the market. But by the time you've opened five tabs, 
-                downloaded references, and tried to organize your thoughts in rigid folders, 
-                that creative spark is already fading.
+                You start with a feeling—a texture, a morning color, 
+                a glimpse of fabric. But by the time you've opened five tabs 
+                and organized rigid folders, that creative spark has faded.
               </p>
               <p className="text-xl font-display italic text-foreground">
-                What if your workspace could flow with your creative process instead of fighting it?
+                What if your workspace flowed with your creative process?
               </p>
             </motion.div>
 

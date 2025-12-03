@@ -67,7 +67,7 @@ const HeroSection = () => {
             className="text-base md:text-lg text-foreground/80 max-w-2xl mx-auto mb-10 font-body leading-relaxed drop-shadow-sm"
           >
             An intelligent creative workspace where mood becomes trend, trend becomes direction, 
-            and direction becomes your next collection. All in one flow.
+            and direction becomes your next collection.
           </motion.p>
 
           {/* CTA */}
@@ -90,7 +90,7 @@ const HeroSection = () => {
             transition={{ delay: 1, duration: 0.8 }}
             className="mt-8 text-sm text-muted-foreground font-body"
           >
-            Launching Q1 2025 • Built for designers, by designers
+            Launching Q1 2025
           </motion.p>
         </motion.div>
       </div>

@@ -6,40 +6,40 @@ const modules = [
   {
     icon: Sparkles,
     title: "Moodboards",
-    headline: "Capture the Ephemeral",
-    description: "Describe your inspiration in words, upload a single image, or simply express a feeling. Our AI translates abstract concepts into visual mood—textures, colors, atmospheres that crystallize your vision.",
+    headline: "Capture the ephemeral",
+    description: "Describe your inspiration, upload an image, or express a feeling. AI translates abstract concepts into visual mood—textures, colors, atmospheres that crystallize your vision.",
     example: '"90s minimalism meets Moroccan textiles, but make it cyberpunk"',
-    exampleResult: "AI generates a curated moodboard",
+    exampleResult: "Curated moodboard",
     gradient: "from-gold/20 to-gold-light/10",
     accentColor: "gold",
   },
   {
     icon: Radar,
     title: "Trendboards",
-    headline: "Research While You Create",
-    description: "Stop losing hours to trend research. Our AI scans current collections, street style, and emerging patterns across the fashion landscape—then synthesizes what matters for your aesthetic direction.",
-    example: '"Show me where oversized tailoring is heading for Fall 2025"',
-    exampleResult: "AI curates relevant trend directions",
+    headline: "Research while you create",
+    description: "AI scans current collections, street style, and emerging patterns—then synthesizes what matters for your aesthetic direction.",
+    example: '"Where is oversized tailoring heading for Fall 2025?"',
+    exampleResult: "Relevant trend directions",
     gradient: "from-blue/20 to-blue-light/10",
     accentColor: "blue",
   },
   {
     icon: Layers,
     title: "Designboards",
-    headline: "Where Vision Meets Direction",
-    description: "Blend your moodboards and trendboards into concrete design direction. The AI helps you refine silhouettes, explore color palettes, and develop cohesive visual languages for your collection.",
-    example: '"Mix the cyberpunk mood with tailoring trends"',
-    exampleResult: "AI generates design direction with style references",
+    headline: "Vision meets direction",
+    description: "Blend moodboards and trendboards into concrete design direction. Refine silhouettes, explore palettes, develop cohesive visual languages.",
+    example: '"Mix cyberpunk mood with tailoring trends"',
+    exampleResult: "Design direction with style references",
     gradient: "from-gold/15 to-blue/15",
     accentColor: "gold",
   },
   {
     icon: Grid3X3,
     title: "Product Catalogs",
-    headline: "From Concept to Collection",
-    description: "Generate production-ready product visuals, technical flats, and complete catalog layouts. Your entire collection story—from hero pieces to supporting styles—organized and visualized.",
-    example: '"Create a 15-piece capsule collection based on this design direction"',
-    exampleResult: "AI generates complete catalog",
+    headline: "Concept to collection",
+    description: "Generate production-ready visuals, technical flats, and complete catalog layouts. Your entire collection story—organized and visualized.",
+    example: '"Create a 15-piece capsule from this direction"',
+    exampleResult: "Complete catalog",
     gradient: "from-blue/20 to-gold/10",
     accentColor: "blue",
   },
@@ -59,12 +59,9 @@ const ModulesSection = () => {
           className="text-center mb-20"
         >
           <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight mb-6">
-            From vibe to collection{" "}
-            <span className="text-gradient-hero italic">in four acts</span>
+            Four Intelligent{" "}
+            <span className="text-gradient-hero italic">Workspaces</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-body">
-            Your Complete Design Stack
-          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">

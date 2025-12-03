@@ -3,13 +3,13 @@ import { useRef } from "react";
 
 const scenarios = [
   {
-    text: "Indie designers use it to research trends and create professional presentations for buyers—work that used to take a team.",
+    text: "Indie designers create professional buyer presentations—work that used to take a team.",
   },
   {
-    text: "Design directors use it to rapidly explore multiple collection directions before committing resources to sampling.",
+    text: "Design directors rapidly explore multiple collection directions before committing to sampling.",
   },
   {
-    text: "Fashion students use it to learn trend forecasting and develop portfolios that show both creativity and market awareness.",
+    text: "Fashion students learn trend forecasting and build portfolios showing creativity and market awareness.",
   },
 ];
 
@@ -30,9 +30,6 @@ const DesignerTypesSection = () => {
             For every type of{" "}
             <span className="text-gradient-hero italic">designer</span>
           </h2>
-          <p className="text-lg text-muted-foreground mt-4 font-body">
-            Whether you're solo or leading a team
-          </p>
         </motion.div>
 
         <div className="max-w-4xl mx-auto space-y-6">

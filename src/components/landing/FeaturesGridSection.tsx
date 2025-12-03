@@ -6,7 +6,7 @@ const features = [
   {
     icon: MousePointer,
     title: "Visual-First Interface",
-    description: "Drag images anywhere. Paste inspiration directly into your workspace. Create mood boards as intuitively as you'd arrange physical fabric swatches.",
+    description: "Drag images anywhere. Create mood boards as intuitively as arranging physical swatches.",
   },
   {
     icon: Brain,
@@ -16,7 +16,7 @@ const features = [
   {
     icon: Cloud,
     title: "Seamless Memory",
-    description: "Return to any project and pick up exactly where you left off. Your vibe, preferences, and creative history—always in sync.",
+    description: "Return to any project exactly where you left off. Your vibe, preferences, and creative history—always in sync.",
   },
 ];
 
@@ -37,9 +37,6 @@ const FeaturesGridSection = () => {
             Built for how designers{" "}
             <span className="italic text-muted-foreground">actually work</span>
           </h2>
-          <p className="text-lg text-muted-foreground font-body">
-            No more creative context-switching
-          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">

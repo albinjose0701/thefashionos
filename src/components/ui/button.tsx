@@ -21,7 +21,7 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         hero: "bg-charcoal text-cream border-0 hover:bg-charcoal/90 shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5",
         "hero-outline": "border-2 border-charcoal/30 bg-transparent text-charcoal hover:bg-charcoal hover:text-cream",
-        gold: "bg-gold text-charcoal font-semibold shadow-lg hover:bg-gold-dark transform hover:-translate-y-0.5",
+        gold: "bg-gold text-charcoal font-semibold shadow-lg hover:bg-gold-dark hover:shadow-[0_0_25px_hsl(42,100%,50%,0.5)] transform hover:-translate-y-0.5 transition-all duration-300",
         "gold-outline": "border-2 border-gold bg-transparent text-gold hover:bg-gold hover:text-charcoal",
         dark: "bg-charcoal text-cream hover:bg-charcoal/90",
         "dark-outline": "border-2 border-cream/30 text-cream hover:bg-cream/10",
