@@ -46,7 +46,7 @@ const HeroSection = () => {
             className="font-display text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight mb-6"
           >
             Your Fashion{" "}
-            <span className="text-gradient-hero drop-shadow-lg" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.3)' }}>OS</span>
+            <span className="bg-charcoal text-cream px-4 py-1 rounded-lg inline-block">OS</span>
           </motion.h1>
 
           {/* Subheadline */}
