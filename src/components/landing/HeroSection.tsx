@@ -77,7 +77,7 @@ const HeroSection = () => {
             transition={{ delay: 0.8, duration: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <Button variant="hero" size="xl" onClick={scrollToWaitlist}>
+            <Button variant="gold" size="xl" onClick={scrollToWaitlist}>
               Join the Waitlist
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
