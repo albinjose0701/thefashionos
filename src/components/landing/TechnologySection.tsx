@@ -18,18 +18,14 @@ const TechnologySection = () => {
               For the Curious
             </p>
             <h2 className="font-display text-3xl md:text-5xl font-medium tracking-tight mb-8">
-              Generative AI trained on{" "}
-              <span className="text-gradient-gold">fashion</span>, not just images
+              Fashion Intelligence,{" "}
+              <span className="text-gradient-gold">Not Just Image Generation</span>
             </h2>
             
             <p className="text-lg md:text-xl text-cream/70 leading-relaxed font-body mb-8">
               Our models understand garment construction, textile behavior, color theory, 
-              and fashion history. We've trained on decades of runway shows, editorial spreads, 
-              and design archives—then fine-tuned for practical application in real design workflows.
-            </p>
-
-            <p className="text-xl font-display italic text-cream/90">
-              This isn't just image generation. It's fashion intelligence.
+              and fashion history. Trained on decades of runway shows and design archives, 
+              fine-tuned for real design workflows.
             </p>
           </motion.div>
 
@@ -40,15 +36,15 @@ const TechnologySection = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4"
           >
-            {[
-              "Silhouette Recognition",
-              "Color Theory",
-              "Textile Analysis",
-              "Trend Prediction",
-              "Style Transfer",
-              "Collection Logic",
-              "Seasonal Context",
-              "Market Awareness",
+          {[
+              "Silhouette recognition",
+              "Color theory",
+              "Textile analysis",
+              "Trend prediction",
+              "Style transfer",
+              "Collection logic",
+              "Seasonal context",
+              "Market awareness",
             ].map((item, index) => (
               <motion.div
                 key={item}

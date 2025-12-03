@@ -10,10 +10,10 @@ const flowSteps = [
 ];
 
 const annotations = [
-  "Start anywhere, move fluidly",
-  "Iterate in real-time",
-  "AI learns your aesthetic",
-  "Export at any stage",
+  "Start anywhere. Move fluidly.",
+  "Iterate in real-time.",
+  "AI learns your aesthetic.",
+  "Export at any stage.",
 ];
 
 const FlowSection = () => {
@@ -30,8 +30,8 @@ const FlowSection = () => {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight mb-6">
-            Your natural creative process,{" "}
-            <span className="text-gradient-hero italic">amplified</span>
+            How It{" "}
+            <span className="text-gradient-hero italic">Works</span>
           </h2>
         </motion.div>
 
