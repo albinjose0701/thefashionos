@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Sparkles, Radar, Layers, Grid3X3, Quote } from "lucide-react";
+import { Sparkles, Radar, Layers, Grid3X3 } from "lucide-react";
 
 const modules = [
   {
@@ -8,40 +8,32 @@ const modules = [
     title: "Moodboards",
     headline: "Capture the Ephemeral",
     description: "Describe your inspiration in words, upload a single image, or simply express a feeling. Our AI translates abstract concepts into visual mood—textures, colors, atmospheres that crystallize your vision.",
-    example: '"90s minimalism meets Moroccan textiles, but make it cyberpunk"',
-    exampleResult: "AI generates a curated moodboard",
+    example: '"90s minimalism meets Moroccan textiles, but make it cyberpunk" → AI generates a curated moodboard',
     gradient: "from-gold/20 to-gold-light/10",
-    accentColor: "gold",
   },
   {
     icon: Radar,
     title: "Trendboards",
     headline: "Research While You Create",
     description: "Stop losing hours to trend research. Our AI scans current collections, street style, and emerging patterns across the fashion landscape—then synthesizes what matters for your aesthetic direction.",
-    example: '"Show me where oversized tailoring is heading for Fall 2025"',
-    exampleResult: "AI curates relevant trend directions",
+    example: '"Show me where oversized tailoring is heading for Fall 2025" → AI curates relevant trend directions',
     gradient: "from-blue/20 to-blue-light/10",
-    accentColor: "blue",
   },
   {
     icon: Layers,
     title: "Designboards",
     headline: "Where Vision Meets Direction",
     description: "Blend your moodboards and trendboards into concrete design direction. The AI helps you refine silhouettes, explore color palettes, and develop cohesive visual languages for your collection.",
-    example: '"Mix the cyberpunk mood with tailoring trends"',
-    exampleResult: "AI generates design direction with style references",
+    example: '"Mix the cyberpunk mood with tailoring trends" → AI generates design direction with style references',
     gradient: "from-gold/15 to-blue/15",
-    accentColor: "gold",
   },
   {
     icon: Grid3X3,
     title: "Product Catalogs",
     headline: "From Concept to Collection",
     description: "Generate production-ready product visuals, technical flats, and complete catalog layouts. Your entire collection story—from hero pieces to supporting styles—organized and visualized.",
-    example: '"Create a 15-piece capsule collection based on this design direction"',
-    exampleResult: "AI generates complete catalog",
+    example: '"Create a 15-piece capsule collection based on this design direction" → AI generates complete catalog',
     gradient: "from-blue/20 to-gold/10",
-    accentColor: "blue",
   },
 ];
 
@@ -94,20 +86,10 @@ const ModulesSection = () => {
                 {module.description}
               </p>
 
-              {/* Enhanced Example Prompt Box */}
-              <div className={`p-5 rounded-xl bg-card border-2 ${module.accentColor === 'gold' ? 'border-gold/40' : 'border-blue/40'} shadow-lg`}>
-                <div className="flex items-start gap-3 mb-3">
-                  <Quote className={`w-5 h-5 ${module.accentColor === 'gold' ? 'text-gold' : 'text-blue'} flex-shrink-0 mt-0.5`} />
-                  <p className={`text-base font-medium ${module.accentColor === 'gold' ? 'text-gold' : 'text-blue'} font-body italic`}>
-                    {module.example}
-                  </p>
-                </div>
-                <div className="ml-8 flex items-center gap-2">
-                  <span className="text-xs text-muted-foreground">→</span>
-                  <p className="text-sm text-foreground/70 font-body">
-                    {module.exampleResult}
-                  </p>
-                </div>
+              <div className="p-4 rounded-xl bg-card/80 border border-border/30">
+                <p className="text-sm italic text-foreground/80 font-body">
+                  {module.example}
+                </p>
               </div>
             </motion.div>
           ))}

@@ -46,7 +46,7 @@ const HeroSection = () => {
             className="font-display text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight mb-6"
           >
             Your Fashion{" "}
-            <span className="text-gradient-hero drop-shadow-lg" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.3)' }}>OS</span>
+            <span className="text-gradient-hero">Operating System</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -54,7 +54,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="font-display text-xl md:text-2xl text-foreground/90 mb-6 italic drop-shadow-sm"
+            className="font-display text-xl md:text-2xl text-muted-foreground mb-6 italic"
           >
             From inspiration to collection—powered by AI that thinks like a designer.
           </motion.p>
@@ -64,7 +64,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="text-base md:text-lg text-foreground/80 max-w-2xl mx-auto mb-10 font-body leading-relaxed drop-shadow-sm"
+            className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-10 font-body leading-relaxed"
           >
             An intelligent creative workspace where mood becomes trend, trend becomes direction, 
             and direction becomes your next collection. All in one flow.

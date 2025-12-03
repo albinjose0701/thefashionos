@@ -1,6 +1,7 @@
 import Navbar from "@/components/landing/Navbar";
 import HeroSection from "@/components/landing/HeroSection";
 import CreativeChallengeSection from "@/components/landing/CreativeChallengeSection";
+import CreativeCopilotSection from "@/components/landing/CreativeCopilotSection";
 import ModulesSection from "@/components/landing/ModulesSection";
 import FlowSection from "@/components/landing/FlowSection";
 import FeaturesGridSection from "@/components/landing/FeaturesGridSection";
@@ -18,6 +19,7 @@ const Index = () => {
       <main>
         <HeroSection />
         <CreativeChallengeSection />
+        <CreativeCopilotSection />
         <ModulesSection />
         <FlowSection />
         <FeaturesGridSection />

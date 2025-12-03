@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Layers, Sparkles } from "lucide-react";
+import { Layers, Sparkles, X, FolderOpen, Globe, Image } from "lucide-react";
 
 const CreativeChallengeSection = () => {
   const ref = useRef(null);
@@ -17,7 +17,7 @@ const CreativeChallengeSection = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight mb-8">
+            <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight mb-8 whitespace-nowrap">
               Design is fluid.{" "}
               <span className="text-muted-foreground italic">Your tools shouldn't box you in.</span>
             </h2>
@@ -42,55 +42,101 @@ const CreativeChallengeSection = () => {
               </p>
             </motion.div>
 
-            {/* Visual Split */}
+            {/* Visual Split - Enhanced */}
             <motion.div
               initial={{ opacity: 0, x: 40 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="grid grid-cols-2 gap-4"
+              className="grid grid-cols-2 gap-6"
             >
-              {/* Chaotic State */}
-              <div className="relative p-6 rounded-2xl bg-card border border-border/50 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-destructive/5 to-transparent" />
-                <div className="relative space-y-3">
-                  <div className="flex gap-2 flex-wrap">
+              {/* Chaotic State - Enhanced */}
+              <motion.div 
+                className="relative p-6 rounded-2xl bg-card border-2 border-destructive/30 overflow-hidden shadow-lg"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-destructive/10 to-destructive/5" />
+                <div className="relative space-y-4">
+                  {/* Browser tabs chaos */}
+                  <div className="flex gap-1">
                     {[1, 2, 3, 4, 5].map((i) => (
                       <div
                         key={i}
-                        className="h-3 bg-muted-foreground/20 rounded"
-                        style={{ width: `${Math.random() * 40 + 20}px`, transform: `rotate(${Math.random() * 10 - 5}deg)` }}
-                      />
+                        className="h-5 bg-muted-foreground/30 rounded-t flex items-center justify-center px-1"
+                        style={{ width: `${Math.random() * 30 + 25}px` }}
+                      >
+                        <X className="w-2 h-2 text-muted-foreground/50" />
+                      </div>
                     ))}
                   </div>
-                  <div className="grid grid-cols-3 gap-1">
-                    {[1, 2, 3, 4, 5, 6].map((i) => (
-                      <div
-                        key={i}
-                        className="aspect-square bg-muted-foreground/10 rounded-sm"
-                        style={{ transform: `rotate(${Math.random() * 6 - 3}deg)` }}
-                      />
-                    ))}
+                  
+                  {/* Scattered folders and images */}
+                  <div className="relative h-24">
+                    <FolderOpen className="w-6 h-6 text-muted-foreground/40 absolute top-0 left-2 rotate-[-8deg]" />
+                    <Globe className="w-5 h-5 text-muted-foreground/30 absolute top-2 right-4 rotate-[12deg]" />
+                    <Image className="w-7 h-7 text-muted-foreground/35 absolute bottom-2 left-8 rotate-[5deg]" />
+                    <FolderOpen className="w-5 h-5 text-muted-foreground/25 absolute bottom-0 right-2 rotate-[-15deg]" />
+                    <div className="absolute top-8 left-1/2 -translate-x-1/2 w-8 h-8 border-2 border-dashed border-muted-foreground/20 rounded" />
                   </div>
-                  <Layers className="w-8 h-8 text-muted-foreground/40 mx-auto mt-4" />
-                  <p className="text-xs text-muted-foreground text-center font-body">Scattered & Chaotic</p>
+                  
+                  <Layers className="w-10 h-10 text-destructive/50 mx-auto" />
+                  <div className="text-center">
+                    <p className="text-sm font-semibold text-destructive/80 font-body">Scattered & Chaotic</p>
+                    <p className="text-xs text-muted-foreground mt-1">Lost inspiration</p>
+                  </div>
                 </div>
-              </div>
+              </motion.div>
 
-              {/* Organized Flow */}
-              <div className="relative p-6 rounded-2xl bg-card border border-gold/30 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-gold/5 to-blue/5" />
-                <div className="relative space-y-3">
-                  <div className="h-2 bg-gold/40 rounded-full w-full" />
-                  <div className="h-2 bg-blue/40 rounded-full w-4/5" />
+              {/* Organized Flow - Enhanced */}
+              <motion.div 
+                className="relative p-6 rounded-2xl bg-card border-2 border-gold/50 overflow-hidden shadow-xl shadow-gold/10"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-gold/10 to-blue/10" />
+                <div className="relative space-y-4">
+                  {/* Unified flow bars */}
+                  <div className="space-y-2">
+                    <motion.div 
+                      className="h-3 bg-gradient-to-r from-gold/60 to-gold/40 rounded-full"
+                      initial={{ width: 0 }}
+                      animate={isInView ? { width: "100%" } : {}}
+                      transition={{ duration: 1, delay: 0.6 }}
+                    />
+                    <motion.div 
+                      className="h-3 bg-gradient-to-r from-gold/40 to-blue/50 rounded-full"
+                      initial={{ width: 0 }}
+                      animate={isInView ? { width: "85%" } : {}}
+                      transition={{ duration: 1, delay: 0.8 }}
+                    />
+                    <motion.div 
+                      className="h-3 bg-gradient-to-r from-blue/50 to-blue/60 rounded-full"
+                      initial={{ width: 0 }}
+                      animate={isInView ? { width: "70%" } : {}}
+                      transition={{ duration: 1, delay: 1 }}
+                    />
+                  </div>
+                  
+                  {/* Organized grid */}
                   <div className="grid grid-cols-3 gap-2 mt-4">
                     {[1, 2, 3].map((i) => (
-                      <div key={i} className="aspect-square rounded-lg bg-gradient-to-br from-gold/20 to-blue/20" />
+                      <motion.div 
+                        key={i} 
+                        className="aspect-square rounded-lg bg-gradient-to-br from-gold/30 to-blue/30 border border-gold/20"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                        transition={{ duration: 0.5, delay: 1 + i * 0.1 }}
+                      />
                     ))}
                   </div>
-                  <Sparkles className="w-8 h-8 text-gold mx-auto mt-4" />
-                  <p className="text-xs text-foreground text-center font-body font-medium">Fluid & Organized</p>
+                  
+                  <Sparkles className="w-10 h-10 text-gold mx-auto" />
+                  <div className="text-center">
+                    <p className="text-sm font-semibold text-gold font-body">Fluid & Organized</p>
+                    <p className="text-xs text-foreground/70 mt-1">Creative flow preserved</p>
+                  </div>
                 </div>
-              </div>
+              </motion.div>
             </motion.div>
           </div>
         </div>
