@@ -20,7 +20,7 @@ const CreativeChallengeSection = () => {
             <h2 className="font-display text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight mb-8">
               Design moves fast.{" "}
               <br className="sm:hidden" />
-              <span className="text-muted-foreground italic">Capture the trends faster.</span>
+              <span className="text-muted-foreground italic">Your process shouldn't crawl.</span>
             </h2>
           </motion.div>
 
@@ -103,30 +103,30 @@ const CreativeChallengeSection = () => {
 
               {/* Lal10 Timeline */}
               <motion.div 
-                className="relative p-6 rounded-2xl bg-card border-2 border-primary/50 overflow-hidden shadow-xl shadow-primary/10"
+                className="relative p-6 rounded-2xl bg-card border-2 border-gold/50 overflow-hidden shadow-xl shadow-gold/10"
                 whileHover={{ scale: 1.01 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/5" />
+                <div className="absolute inset-0 bg-gradient-to-br from-gold/10 to-blue/5" />
                 <div className="relative">
                   <div className="flex items-center gap-2 mb-4">
-                    <Zap className="w-5 h-5 text-primary" />
-                    <span className="text-sm font-semibold text-primary font-body uppercase tracking-wide">With Lal10</span>
+                    <Zap className="w-5 h-5 text-gold" />
+                    <span className="text-sm font-semibold text-gold font-body uppercase tracking-wide">With Lal10</span>
                   </div>
                   
                   {/* Compressed timeline bar */}
                   <div className="relative mb-4">
                     <div className="h-3 bg-muted rounded-full overflow-hidden">
                       <motion.div 
-                        className="h-full bg-gradient-to-r from-primary via-primary/80 to-accent/60 rounded-full"
+                        className="h-full bg-gradient-to-r from-gold via-gold/80 to-blue/60 rounded-full"
                         initial={{ width: 0 }}
                         animate={isInView ? { width: "25%" } : {}}
                         transition={{ duration: 0.8, delay: 0.8 }}
                       />
                     </div>
                     <div className="flex justify-between mt-2 text-xs">
-                      <span className="text-primary font-medium">Trend spotted</span>
-                      <span className="text-primary font-medium">Days, not months</span>
+                      <span className="text-gold font-medium">Trend spotted</span>
+                      <span className="text-gold font-medium">Days, not months</span>
                       <span className="text-muted-foreground">Ready to produce</span>
                     </div>
                   </div>
@@ -135,13 +135,13 @@ const CreativeChallengeSection = () => {
                   <div className="flex flex-wrap items-center gap-1 sm:gap-2 text-xs">
                     {["Capture", "AI Research", "Design", "Catalog"].map((step, i) => (
                       <div key={step} className="flex items-center">
-                        <span className="px-1.5 sm:px-2 py-1 bg-primary/20 rounded text-[9px] sm:text-[10px] text-primary font-medium">{step}</span>
-                        {i < 3 && <ArrowRight className="w-2 h-2 sm:w-3 sm:h-3 mx-0.5 sm:mx-1 text-primary/60" />}
+                        <span className="px-1.5 sm:px-2 py-1 bg-gold/20 rounded text-[9px] sm:text-[10px] text-gold font-medium">{step}</span>
+                        {i < 3 && <ArrowRight className="w-2 h-2 sm:w-3 sm:h-3 mx-0.5 sm:mx-1 text-gold/60" />}
                       </div>
                     ))}
                   </div>
                   
-                  <div className="mt-4 flex items-center gap-2 text-sm text-primary">
+                  <div className="mt-4 flex items-center gap-2 text-sm text-gold">
                     <TrendingUp className="w-4 h-4" />
                     <span className="font-body font-medium">Catch trends while they're still rising</span>
                   </div>
@@ -159,10 +159,10 @@ const CreativeChallengeSection = () => {
                   <div className="text-xl sm:text-2xl font-display font-bold text-destructive/70">90-180</div>
                   <div className="text-[10px] sm:text-xs text-muted-foreground">days traditional</div>
                 </div>
-                <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+                <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 text-gold" />
                 <div className="text-center">
-                  <div className="text-xl sm:text-2xl font-display font-bold text-primary">10x</div>
-                  <div className="text-[10px] sm:text-xs text-primary/70">faster with Lal10</div>
+                  <div className="text-xl sm:text-2xl font-display font-bold text-gold">10x</div>
+                  <div className="text-[10px] sm:text-xs text-gold/70">faster with Lal10</div>
                 </div>
               </motion.div>
             </motion.div>
