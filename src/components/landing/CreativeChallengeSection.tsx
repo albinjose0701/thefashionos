@@ -17,8 +17,9 @@ const CreativeChallengeSection = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight mb-8">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight mb-8">
               Design moves fast.{" "}
+              <br className="sm:hidden" />
               <span className="text-muted-foreground italic">Your process shouldn't crawl.</span>
             </h2>
           </motion.div>
@@ -84,11 +85,11 @@ const CreativeChallengeSection = () => {
                   </div>
                   
                   {/* Process steps */}
-                  <div className="flex items-center gap-2 text-xs text-muted-foreground overflow-x-auto pb-2">
+                  <div className="flex flex-wrap items-center gap-1 sm:gap-2 text-xs text-muted-foreground">
                     {["Research", "Ideation", "Design", "Sampling", "Production", "Launch"].map((step, i) => (
-                      <div key={step} className="flex items-center shrink-0">
-                        <span className="px-2 py-1 bg-muted/50 rounded text-[10px]">{step}</span>
-                        {i < 5 && <ArrowRight className="w-3 h-3 mx-1 text-muted-foreground/40" />}
+                      <div key={step} className="flex items-center">
+                        <span className="px-1.5 sm:px-2 py-1 bg-muted/50 rounded text-[9px] sm:text-[10px]">{step}</span>
+                        {i < 5 && <ArrowRight className="w-2 h-2 sm:w-3 sm:h-3 mx-0.5 sm:mx-1 text-muted-foreground/40" />}
                       </div>
                     ))}
                   </div>
@@ -131,11 +132,11 @@ const CreativeChallengeSection = () => {
                   </div>
                   
                   {/* Streamlined process */}
-                  <div className="flex items-center gap-2 text-xs">
+                  <div className="flex flex-wrap items-center gap-1 sm:gap-2 text-xs">
                     {["Capture", "AI Research", "Design", "Catalog"].map((step, i) => (
-                      <div key={step} className="flex items-center shrink-0">
-                        <span className="px-2 py-1 bg-gold/20 rounded text-[10px] text-gold font-medium">{step}</span>
-                        {i < 3 && <ArrowRight className="w-3 h-3 mx-1 text-gold/60" />}
+                      <div key={step} className="flex items-center">
+                        <span className="px-1.5 sm:px-2 py-1 bg-gold/20 rounded text-[9px] sm:text-[10px] text-gold font-medium">{step}</span>
+                        {i < 3 && <ArrowRight className="w-2 h-2 sm:w-3 sm:h-3 mx-0.5 sm:mx-1 text-gold/60" />}
                       </div>
                     ))}
                   </div>
@@ -149,19 +150,19 @@ const CreativeChallengeSection = () => {
 
               {/* Speed comparison stat */}
               <motion.div 
-                className="flex items-center justify-center gap-6 p-4 rounded-xl bg-card/50 border border-border/50"
+                className="flex items-center justify-center gap-4 sm:gap-6 p-3 sm:p-4 rounded-xl bg-card/50 border border-border/50"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 1.2 }}
               >
                 <div className="text-center">
-                  <div className="text-2xl font-display font-bold text-destructive/70">90-180</div>
-                  <div className="text-xs text-muted-foreground">days traditional</div>
+                  <div className="text-xl sm:text-2xl font-display font-bold text-destructive/70">90-180</div>
+                  <div className="text-[10px] sm:text-xs text-muted-foreground">days traditional</div>
                 </div>
-                <ArrowRight className="w-6 h-6 text-gold" />
+                <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 text-gold" />
                 <div className="text-center">
-                  <div className="text-2xl font-display font-bold text-gold">10x</div>
-                  <div className="text-xs text-gold/70">faster with Lal10</div>
+                  <div className="text-xl sm:text-2xl font-display font-bold text-gold">10x</div>
+                  <div className="text-[10px] sm:text-xs text-gold/70">faster with Lal10</div>
                 </div>
               </motion.div>
             </motion.div>
