@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Layers, Sparkles, X, FolderOpen, Globe, Image } from "lucide-react";
+import { Clock, Zap, TrendingUp, Calendar, ArrowRight } from "lucide-react";
 
 const CreativeChallengeSection = () => {
   const ref = useRef(null);
@@ -17,13 +17,13 @@ const CreativeChallengeSection = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight mb-8 whitespace-nowrap">
-              Design is fluid.{" "}
-              <span className="text-muted-foreground italic">Your tools shouldn't be.</span>
+            <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight mb-8">
+              Design moves fast.{" "}
+              <span className="text-muted-foreground italic">Your process shouldn't crawl.</span>
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
             <motion.div
               initial={{ opacity: 0, x: -40 }}
@@ -32,108 +32,136 @@ const CreativeChallengeSection = () => {
               className="space-y-6"
             >
               <p className="text-lg text-muted-foreground leading-relaxed font-body">
-                You start with a feeling—a texture, a morning color, 
-                a glimpse of fabric. But by the time you've opened five tabs 
-                and organized rigid folders, that creative spark has faded.
+                You spot a trend emerging on the streets of Seoul. By the time you've researched, 
+                designed, and developed a collection around it—90 to 180 days later—the fashion 
+                world has moved on.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed font-body">
+                Current design cycles are too slow for a world where trends shift in weeks, not seasons. 
+                Researching, ideating, and creating an entire collection from scratch is painstaking work. 
+                And by the time your vision materializes, you're already chasing the next wave.
               </p>
               <p className="text-xl font-display italic text-foreground">
-                What if your workspace flowed with your creative process?
+                What if your workspace moved at the speed of inspiration?
               </p>
             </motion.div>
 
-            {/* Visual Split - Enhanced */}
+            {/* Infographic - Timeline Comparison */}
             <motion.div
               initial={{ opacity: 0, x: 40 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="grid grid-cols-2 gap-6"
+              className="space-y-6"
             >
-              {/* Chaotic State - Enhanced */}
+              {/* Traditional Timeline */}
               <motion.div 
-                className="relative p-6 rounded-2xl bg-card border-2 border-destructive/30 overflow-hidden shadow-lg"
-                whileHover={{ scale: 1.02 }}
+                className="relative p-6 rounded-2xl bg-card border-2 border-destructive/30 overflow-hidden"
+                whileHover={{ scale: 1.01 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-destructive/10 to-destructive/5" />
-                <div className="relative space-y-4">
-                  {/* Browser tabs chaos */}
-                  <div className="flex gap-1">
-                    {[1, 2, 3, 4, 5].map((i) => (
-                      <div
-                        key={i}
-                        className="h-5 bg-muted-foreground/30 rounded-t flex items-center justify-center px-1"
-                        style={{ width: `${Math.random() * 30 + 25}px` }}
-                      >
-                        <X className="w-2 h-2 text-muted-foreground/50" />
+                <div className="absolute inset-0 bg-gradient-to-br from-destructive/5 to-transparent" />
+                <div className="relative">
+                  <div className="flex items-center gap-2 mb-4">
+                    <Clock className="w-5 h-5 text-destructive/70" />
+                    <span className="text-sm font-semibold text-destructive/80 font-body uppercase tracking-wide">Traditional Process</span>
+                  </div>
+                  
+                  {/* Timeline bar */}
+                  <div className="relative mb-4">
+                    <div className="h-3 bg-muted rounded-full overflow-hidden">
+                      <motion.div 
+                        className="h-full bg-gradient-to-r from-destructive/60 to-destructive/40 rounded-full"
+                        initial={{ width: 0 }}
+                        animate={isInView ? { width: "100%" } : {}}
+                        transition={{ duration: 1.5, delay: 0.5 }}
+                      />
+                    </div>
+                    <div className="flex justify-between mt-2 text-xs text-muted-foreground">
+                      <span>Trend spotted</span>
+                      <span>90-180 days</span>
+                      <span>Launch</span>
+                    </div>
+                  </div>
+                  
+                  {/* Process steps */}
+                  <div className="flex items-center gap-2 text-xs text-muted-foreground overflow-x-auto pb-2">
+                    {["Research", "Ideation", "Design", "Sampling", "Production", "Launch"].map((step, i) => (
+                      <div key={step} className="flex items-center shrink-0">
+                        <span className="px-2 py-1 bg-muted/50 rounded text-[10px]">{step}</span>
+                        {i < 5 && <ArrowRight className="w-3 h-3 mx-1 text-muted-foreground/40" />}
                       </div>
                     ))}
                   </div>
                   
-                  {/* Scattered folders and images */}
-                  <div className="relative h-24">
-                    <FolderOpen className="w-6 h-6 text-muted-foreground/40 absolute top-0 left-2 rotate-[-8deg]" />
-                    <Globe className="w-5 h-5 text-muted-foreground/30 absolute top-2 right-4 rotate-[12deg]" />
-                    <Image className="w-7 h-7 text-muted-foreground/35 absolute bottom-2 left-8 rotate-[5deg]" />
-                    <FolderOpen className="w-5 h-5 text-muted-foreground/25 absolute bottom-0 right-2 rotate-[-15deg]" />
-                    <div className="absolute top-8 left-1/2 -translate-x-1/2 w-8 h-8 border-2 border-dashed border-muted-foreground/20 rounded" />
-                  </div>
-                  
-                  <Layers className="w-10 h-10 text-destructive/50 mx-auto" />
-                  <div className="text-center">
-                    <p className="text-sm font-semibold text-destructive/80 font-body">Scattered & Chaotic</p>
-                    <p className="text-xs text-muted-foreground mt-1">Lost inspiration</p>
+                  <div className="mt-4 flex items-center gap-2 text-sm text-destructive/70">
+                    <Calendar className="w-4 h-4" />
+                    <span className="font-body">Trend already passed by launch</span>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Organized Flow - Enhanced */}
+              {/* Lal10 Timeline */}
               <motion.div 
                 className="relative p-6 rounded-2xl bg-card border-2 border-gold/50 overflow-hidden shadow-xl shadow-gold/10"
-                whileHover={{ scale: 1.02 }}
+                whileHover={{ scale: 1.01 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-gold/10 to-blue/10" />
-                <div className="relative space-y-4">
-                  {/* Unified flow bars */}
-                  <div className="space-y-2">
-                    <motion.div 
-                      className="h-3 bg-gradient-to-r from-gold/60 to-gold/40 rounded-full"
-                      initial={{ width: 0 }}
-                      animate={isInView ? { width: "100%" } : {}}
-                      transition={{ duration: 1, delay: 0.6 }}
-                    />
-                    <motion.div 
-                      className="h-3 bg-gradient-to-r from-gold/40 to-blue/50 rounded-full"
-                      initial={{ width: 0 }}
-                      animate={isInView ? { width: "85%" } : {}}
-                      transition={{ duration: 1, delay: 0.8 }}
-                    />
-                    <motion.div 
-                      className="h-3 bg-gradient-to-r from-blue/50 to-blue/60 rounded-full"
-                      initial={{ width: 0 }}
-                      animate={isInView ? { width: "70%" } : {}}
-                      transition={{ duration: 1, delay: 1 }}
-                    />
+                <div className="absolute inset-0 bg-gradient-to-br from-gold/10 to-blue/5" />
+                <div className="relative">
+                  <div className="flex items-center gap-2 mb-4">
+                    <Zap className="w-5 h-5 text-gold" />
+                    <span className="text-sm font-semibold text-gold font-body uppercase tracking-wide">With Lal10</span>
                   </div>
                   
-                  {/* Organized grid */}
-                  <div className="grid grid-cols-3 gap-2 mt-4">
-                    {[1, 2, 3].map((i) => (
+                  {/* Compressed timeline bar */}
+                  <div className="relative mb-4">
+                    <div className="h-3 bg-muted rounded-full overflow-hidden">
                       <motion.div 
-                        key={i} 
-                        className="aspect-square rounded-lg bg-gradient-to-br from-gold/30 to-blue/30 border border-gold/20"
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                        transition={{ duration: 0.5, delay: 1 + i * 0.1 }}
+                        className="h-full bg-gradient-to-r from-gold via-gold/80 to-blue/60 rounded-full"
+                        initial={{ width: 0 }}
+                        animate={isInView ? { width: "25%" } : {}}
+                        transition={{ duration: 0.8, delay: 0.8 }}
                       />
+                    </div>
+                    <div className="flex justify-between mt-2 text-xs">
+                      <span className="text-gold font-medium">Trend spotted</span>
+                      <span className="text-gold font-medium">Days, not months</span>
+                      <span className="text-muted-foreground">Ready to produce</span>
+                    </div>
+                  </div>
+                  
+                  {/* Streamlined process */}
+                  <div className="flex items-center gap-2 text-xs">
+                    {["Capture", "AI Research", "Design", "Catalog"].map((step, i) => (
+                      <div key={step} className="flex items-center shrink-0">
+                        <span className="px-2 py-1 bg-gold/20 rounded text-[10px] text-gold font-medium">{step}</span>
+                        {i < 3 && <ArrowRight className="w-3 h-3 mx-1 text-gold/60" />}
+                      </div>
                     ))}
                   </div>
                   
-                  <Sparkles className="w-10 h-10 text-gold mx-auto" />
-                  <div className="text-center">
-                    <p className="text-sm font-semibold text-gold font-body">Fluid & Organized</p>
-                    <p className="text-xs text-foreground/70 mt-1">Creative flow preserved</p>
+                  <div className="mt-4 flex items-center gap-2 text-sm text-gold">
+                    <TrendingUp className="w-4 h-4" />
+                    <span className="font-body font-medium">Catch trends while they're still rising</span>
                   </div>
+                </div>
+              </motion.div>
+
+              {/* Speed comparison stat */}
+              <motion.div 
+                className="flex items-center justify-center gap-6 p-4 rounded-xl bg-card/50 border border-border/50"
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: 1.2 }}
+              >
+                <div className="text-center">
+                  <div className="text-2xl font-display font-bold text-destructive/70">90-180</div>
+                  <div className="text-xs text-muted-foreground">days traditional</div>
+                </div>
+                <ArrowRight className="w-6 h-6 text-gold" />
+                <div className="text-center">
+                  <div className="text-2xl font-display font-bold text-gold">10x</div>
+                  <div className="text-xs text-gold/70">faster with Lal10</div>
                 </div>
               </motion.div>
             </motion.div>
