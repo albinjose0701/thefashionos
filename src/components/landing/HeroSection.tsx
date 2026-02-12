@@ -45,7 +45,7 @@ const HeroSection = () => {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="font-display text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight mb-6"
           >
-            Your Fashion{" "}
+            The Fashion{" "}
             <span className="bg-charcoal text-cream px-4 py-1 rounded-lg inline-block">OS</span>
           </motion.h1>
 
@@ -90,7 +90,7 @@ const HeroSection = () => {
             transition={{ delay: 1, duration: 0.8 }}
             className="mt-8 text-sm text-muted-foreground font-body"
           >
-            Launching Q1 2025
+            Launching Q2 2026
           </motion.p>
         </motion.div>
       </div>

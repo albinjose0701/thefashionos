@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,8 +30,8 @@ const Navbar = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="font-display text-2xl font-medium">
-            Lal10
+          <a href="#" className="flex items-center">
+            <img src={logo} alt="The Fashion OS" className="h-8" />
           </a>
 
           {/* CTA */}
