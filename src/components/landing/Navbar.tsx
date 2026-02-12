@@ -31,7 +31,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center">
-            <img src={logo} alt="The Fashion OS" className="h-8" />
+            <img src={logo} alt="The Fashion OS" className="w-[200px] h-[113px] object-contain" />
           </a>
 
           {/* CTA */}
