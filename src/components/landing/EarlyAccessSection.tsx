@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/hooks/use-toast";
+import { submitEarlyAccessLead } from "@/lib/crmApi";
 import { Check } from "lucide-react";
 
 const benefits = [
@@ -22,17 +23,33 @@ const EarlyAccessSection = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    toast({
-      title: "You're on the list!",
-      description: "We'll be in touch within 48 hours.",
-    });
-    
-    setIsSubmitting(false);
-    (e.target as HTMLFormElement).reset();
+
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+
+    try {
+      await submitEarlyAccessLead({
+        name: formData.get("name") as string,
+        email: formData.get("email") as string,
+        portfolio: (formData.get("portfolio") as string) || undefined,
+        excitement: (formData.get("excitement") as string) || undefined,
+      });
+
+      toast({
+        title: "You're on the list!",
+        description: "We'll be in touch within 48 hours.",
+      });
+
+      form.reset();
+    } catch {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again in a moment.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
