@@ -1,5 +1,5 @@
 const CRM_SALES_API_URL =
-  "https://superadmin-demo-analytics.thefashionos.com/api/crm/sales";
+  "https://dashboard.thefashionos.com/api/crm/sales";
 
 export interface ContactLead {
   name: string;
