@@ -4,18 +4,18 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/hooks/use-toast";
-import { submitEarlyAccessLead } from "@/lib/crmApi";
+import { submitContactLead } from "@/lib/crmApi";
 import { Check } from "lucide-react";
 
 const benefits = [
-  "Priority access when we launch",
-  "Influence product development with your feedback",
-  "Free access through beta period",
-  "Direct line to our founding team",
-  "Exclusive community of forward-thinking designers",
+  "Talk to our team about your design workflow",
+  "Get a personalized walkthrough of Fashion OS",
+  "Share feedback that shapes the product",
+  "Find the right plan for your studio or brand",
+  "Join a community of forward-thinking designers",
 ];
 
-const EarlyAccessSection = () => {
+const ContactSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -28,15 +28,15 @@ const EarlyAccessSection = () => {
     const formData = new FormData(form);
 
     try {
-      await submitEarlyAccessLead({
+      await submitContactLead({
         name: formData.get("name") as string,
         email: formData.get("email") as string,
         portfolio: (formData.get("portfolio") as string) || undefined,
-        excitement: (formData.get("excitement") as string) || undefined,
+        message: (formData.get("message") as string) || undefined,
       });
 
       toast({
-        title: "You're on the list!",
+        title: "Message sent!",
         description: "We'll be in touch within 48 hours.",
       });
 
@@ -53,7 +53,7 @@ const EarlyAccessSection = () => {
   };
 
   return (
-    <section ref={ref} id="early-access" className="py-24 md:py-32">
+    <section ref={ref} id="contact" className="py-24 md:py-32">
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
@@ -64,13 +64,13 @@ const EarlyAccessSection = () => {
               transition={{ duration: 0.8 }}
             >
               <h2 className="font-display text-3xl md:text-5xl font-medium tracking-tight mb-6">
-                Be among the first to design with{" "}
-                <span className="text-gradient-hero">AI</span>
+                Get in{" "}
+                <span className="text-gradient-hero">touch</span>
               </h2>
               
               <p className="text-lg text-muted-foreground mb-8 font-body leading-relaxed">
-                We're launching with a limited beta for designers who want to shape 
-                the future of fashion technology. Early access members get:
+                Have a question about Fashion OS, or want to see how it fits your
+                creative process? Reach out — we'd love to hear from you.
               </p>
 
               <ul className="space-y-4">
@@ -140,13 +140,14 @@ const EarlyAccessSection = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="excitement" className="block text-sm font-medium mb-2 font-body">
-                    What excites you most about AI in fashion?
+                  <label htmlFor="message" className="block text-sm font-medium mb-2 font-body">
+                    Message
                   </label>
                   <Textarea
-                    id="excitement"
-                    name="excitement"
-                    placeholder="Tell us what you're hoping to create..."
+                    id="message"
+                    name="message"
+                    required
+                    placeholder="Tell us how we can help..."
                     className="min-h-[100px] resize-none"
                   />
                 </div>
@@ -158,7 +159,7 @@ const EarlyAccessSection = () => {
                   className="w-full"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Submitting..." : "Request Early Access"}
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
 
                 <p className="text-xs text-center text-muted-foreground font-body">
@@ -173,4 +174,4 @@ const EarlyAccessSection = () => {
   );
 };
 
-export default EarlyAccessSection;
+export default ContactSection;

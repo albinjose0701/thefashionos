@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
+const PLATFORM_URL = "https://platform.thefashionos.com/";
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -13,10 +15,6 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const scrollToWaitlist = () => {
-    document.getElementById("early-access")?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <motion.nav
@@ -35,12 +33,14 @@ const Navbar = () => {
           </a>
 
           {/* CTA */}
-          <Button 
-            variant={isScrolled ? "gold" : "hero-outline"} 
+          <Button
+            variant={isScrolled ? "gold" : "hero-outline"}
             size="sm"
-            onClick={scrollToWaitlist}
+            asChild
           >
-            Get Early Access
+            <a href={PLATFORM_URL} target="_blank" rel="noopener noreferrer">
+              Get Started
+            </a>
           </Button>
         </div>
       </div>

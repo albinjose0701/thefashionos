@@ -3,11 +3,9 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
-const HeroSection = () => {
-  const scrollToWaitlist = () => {
-    document.getElementById("early-access")?.scrollIntoView({ behavior: "smooth" });
-  };
+const PLATFORM_URL = "https://platform.thefashionos.com/";
 
+const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -77,9 +75,11 @@ const HeroSection = () => {
             transition={{ delay: 0.8, duration: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <Button variant="gold" size="xl" onClick={scrollToWaitlist}>
-              Join the Waitlist
-              <ArrowRight className="ml-2 h-5 w-5" />
+            <Button variant="gold" size="xl" asChild>
+              <a href={PLATFORM_URL} target="_blank" rel="noopener noreferrer">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
             </Button>
           </motion.div>
 

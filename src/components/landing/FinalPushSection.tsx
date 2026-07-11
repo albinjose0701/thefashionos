@@ -3,13 +3,11 @@ import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
+const PLATFORM_URL = "https://platform.thefashionos.com/";
+
 const FinalPushSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-  const scrollToWaitlist = () => {
-    document.getElementById("early-access")?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <section ref={ref} className="py-24 md:py-32 relative overflow-hidden">
@@ -38,9 +36,11 @@ const FinalPushSection = () => {
             </span>
           </p>
 
-          <Button variant="hero" size="xl" onClick={scrollToWaitlist}>
-            Join the Movement
-            <ArrowRight className="ml-2 h-5 w-5" />
+          <Button variant="hero" size="xl" asChild>
+            <a href={PLATFORM_URL} target="_blank" rel="noopener noreferrer">
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </a>
           </Button>
         </motion.div>
       </div>

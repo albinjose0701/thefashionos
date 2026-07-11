@@ -1,17 +1,17 @@
 const CRM_SALES_API_URL =
   "https://superadmin-demo-analytics.thefashionos.com/api/crm/sales";
 
-export interface EarlyAccessLead {
+export interface ContactLead {
   name: string;
   email: string;
   portfolio?: string;
-  excitement?: string;
+  message?: string;
 }
 
-function buildNotes(lead: EarlyAccessLead): string {
+function buildNotes(lead: ContactLead): string {
   const parts: string[] = [];
-  if (lead.excitement?.trim()) {
-    parts.push(lead.excitement.trim());
+  if (lead.message?.trim()) {
+    parts.push(lead.message.trim());
   }
   if (lead.portfolio?.trim()) {
     parts.push(`Portfolio / Instagram: ${lead.portfolio.trim()}`);
@@ -35,7 +35,7 @@ function resolveLinkedIn(portfolio?: string): string {
   return "";
 }
 
-export async function submitEarlyAccessLead(lead: EarlyAccessLead): Promise<void> {
+export async function submitContactLead(lead: ContactLead): Promise<void> {
   const payload = {
     name: lead.name.trim(),
     email: lead.email.trim(),
@@ -51,7 +51,7 @@ export async function submitEarlyAccessLead(lead: EarlyAccessLead): Promise<void
     owner: "",
     source: "website",
     brought_by: "",
-    campaign: "early-access",
+    campaign: "contact",
     priority: "medium",
     preferred_contact_method: "",
     estimated_value: "",
@@ -63,7 +63,7 @@ export async function submitEarlyAccessLead(lead: EarlyAccessLead): Promise<void
     state: "",
     country: "",
     address: "",
-    tags: "early-access",
+    tags: "contact",
     notes: buildNotes(lead),
     investment_interest: "",
     investment_stage: "",

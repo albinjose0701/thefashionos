@@ -6,7 +6,7 @@ import FlowSection from "@/components/landing/FlowSection";
 import FeaturesGridSection from "@/components/landing/FeaturesGridSection";
 import TechnologySection from "@/components/landing/TechnologySection";
 import DesignerTypesSection from "@/components/landing/DesignerTypesSection";
-import EarlyAccessSection from "@/components/landing/EarlyAccessSection";
+import ContactSection from "@/components/landing/ContactSection";
 import FAQSection from "@/components/landing/FAQSection";
 import FinalPushSection from "@/components/landing/FinalPushSection";
 import Footer from "@/components/landing/Footer";
@@ -23,7 +23,7 @@ const Index = () => {
         <FeaturesGridSection />
         <TechnologySection />
         <DesignerTypesSection />
-        <EarlyAccessSection />
+        <ContactSection />
         <FAQSection />
         <FinalPushSection />
       </main>
