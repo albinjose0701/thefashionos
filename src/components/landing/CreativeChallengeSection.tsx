@@ -101,7 +101,7 @@ const CreativeChallengeSection = () => {
                 </div>
               </motion.div>
 
-              {/* Lal10 Timeline */}
+              {/* Fashion OS Timeline */}
               <motion.div 
                 className="relative p-6 rounded-2xl bg-card border-2 border-blue/50 overflow-hidden shadow-xl shadow-blue/10"
                 whileHover={{ scale: 1.01 }}
@@ -111,7 +111,7 @@ const CreativeChallengeSection = () => {
                 <div className="relative">
                   <div className="flex items-center gap-2 mb-4">
                     <Zap className="w-5 h-5 text-blue" />
-                    <span className="text-sm font-semibold text-blue font-body uppercase tracking-wide">With Lal10</span>
+                    <span className="text-sm font-semibold text-blue font-body uppercase tracking-wide">With Fashion OS</span>
                   </div>
                   
                   {/* Compressed timeline bar */}
@@ -162,7 +162,7 @@ const CreativeChallengeSection = () => {
                 <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 text-blue" />
                 <div className="text-center">
                   <div className="text-xl sm:text-2xl font-display font-bold text-blue">10x</div>
-                  <div className="text-[10px] sm:text-xs text-blue/70">faster with Lal10</div>
+                  <div className="text-[10px] sm:text-xs text-blue/70">faster with Fashion OS</div>
                 </div>
               </motion.div>
             </motion.div>

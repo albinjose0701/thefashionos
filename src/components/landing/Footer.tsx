@@ -1,4 +1,5 @@
 import { Instagram, Linkedin, Twitter } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -8,17 +9,19 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-8">
             {/* Logo & Tagline */}
             <div className="text-center md:text-left">
-              <h3 className="font-display text-2xl font-medium mb-2">Lal10</h3>
-              <p className="text-cream/60 font-body text-sm">Fashion Operating System</p>
+              <Link to="/" className="font-display text-2xl font-medium mb-2 inline-block hover:text-cream/90 transition-colors">
+                The Fashion OS
+              </Link>
+              <p className="text-cream/60 font-body text-sm mt-1">Fashion Operating System</p>
             </div>
 
             {/* Contact */}
             <div className="text-center">
-              <a 
-                href="mailto:hello@lal10.com" 
+              <a
+                href="mailto:info@thefashionos.com"
                 className="text-cream/80 hover:text-cream transition-colors font-body"
               >
-                hello@lal10.com
+                info@thefashionos.com
               </a>
             </div>
 
@@ -59,15 +62,18 @@ const Footer = () => {
 
           {/* Bottom Row */}
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-cream/50 font-body">
-            <div className="flex gap-6">
-              <a href="#" className="hover:text-cream/80 transition-colors">
+            <div className="flex flex-wrap justify-center gap-6">
+              <Link to="/about" className="hover:text-cream/80 transition-colors">
+                About Us
+              </Link>
+              <Link to="/privacy-policy" className="hover:text-cream/80 transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#" className="hover:text-cream/80 transition-colors">
+              </Link>
+              <Link to="/terms-of-service" className="hover:text-cream/80 transition-colors">
                 Terms of Service
-              </a>
+              </Link>
             </div>
-            
+
             <p>
               Built with ❤️ for designers who dream in collections
             </p>

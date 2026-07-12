@@ -71,7 +71,8 @@ const ModulesSection = () => {
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.15 * index }}
-              className={`relative p-8 rounded-3xl bg-gradient-to-br ${module.gradient} border border-border/50 hover:border-border transition-all duration-300 group`}
+              className={`relative p-8 rounded-3xl bg-gradient-to-br ${module.gradient} border border-border/50 hover:border-border transition-all duration-500 group hover:-translate-y-1 hover:shadow-xl hover:shadow-charcoal/10`}
+              data-cursor="magnetic"
             >
               <div className="flex items-start gap-4 mb-6">
                 <div className="p-3 rounded-2xl bg-card shadow-sm">
